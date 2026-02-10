@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise W365 TCO Model - Final</title>
+    <title>Enterprise W365 TCO Model - Final v8</title>
     <style>
         :root {
             --primary: #0078d4;
@@ -134,7 +134,7 @@
 
 <div class="container">
     <header>
-        <h1>Enterprise TCO Model v6</h1>
+        <h1>Enterprise TCO Model v8</h1>
         <p style="margin:0; color:#666; font-size: 0.9em;">Lifecycle Extension Savings + Opportunity Cost of Capital (10%)</p>
         
         <div class="controls-grid">
@@ -183,23 +183,23 @@
             <div class="section-header text-capex">Hardware & CapEx</div>
             <div class="inputs-wrapper">
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Hardware Cost</span></div>
+                    <div class="label-row"><span class="label-text">Hardware Cost <span class="info-icon" data-tooltip="Base purchase price of the laptop/desktop device.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_hw" oninput="calc()"></div>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Extended Warranty <span class="info-icon" data-tooltip="Additional warranty/AppleCare cost.">ⓘ</span></span></div>
+                    <div class="label-row"><span class="label-text">Extended Warranty <span class="info-icon" data-tooltip="Cost of extended warranty (e.g., AppleCare, Dell ProSupport) beyond standard 1 year.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_warranty" oninput="calc()"></div>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Warranty / Refresh Cycle <span class="info-icon" data-tooltip="When you MUST buy a new device for heavy workloads.">ⓘ</span></span></div>
+                    <div class="label-row"><span class="label-text">Warranty / Refresh Cycle <span class="info-icon" data-tooltip="The mandatory replacement cycle for physical devices (e.g., every 3 years).">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol" style="font-size:0.8em">Y</span><input type="number" id="l_lifespan" value="3" oninput="calc()"></div>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Max Usable Life (Total) <span class="info-icon" data-tooltip="Total physical life if used as a Thin Client. (Max Life - Warranty) = Extension Savings.">ⓘ</span></span></div>
+                    <div class="label-row"><span class="label-text">Max Usable Life (Total) <span class="info-icon" data-tooltip="Total life of device if reused as a Thin Client. Difference between this and Warranty Cycle = Savings.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol" style="font-size:0.8em">Y</span><input type="number" id="l_max_life" value="5" oninput="calc()"></div>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Logistics & Setup</span></div>
+                    <div class="label-row"><span class="label-text">Logistics & Setup <span class="info-icon" data-tooltip="Shipping, asset tagging, imaging, and delivery costs per device.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_logistics" oninput="calc()"></div>
                 </div>
             </div>
@@ -207,27 +207,23 @@
             <div class="section-header text-opex">IT Ops & Support</div>
             <div class="inputs-wrapper">
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Monthly Support</span></div>
+                    <div class="label-row"><span class="label-text">Monthly Support <span class="info-icon" data-tooltip="Cost of L1/L2 helpdesk tickets and physical break/fix support per month.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_support" oninput="calc()"></div>
                 </div>
-                <div class="form-group">
-                    <div class="label-row"><span class="label-text">Security Stack (Mo)</span></div>
-                    <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_sec" oninput="calc()"></div>
                 </div>
-            </div>
 
             <div class="section-header text-indirect">Indirect / Productivity</div>
             <div class="inputs-wrapper">
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Procurement Overhead</span></div>
+                    <div class="label-row"><span class="label-text">Procurement Overhead <span class="info-icon" data-tooltip="Internal labor cost for PO processing, vendor negotiation, and inventory mgmt.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_proc" oninput="calc()"></div>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Over-Provisioning Waste</span></div>
+                    <div class="label-row"><span class="label-text">Over-Provisioning Waste <span class="info-icon" data-tooltip="Cost of paying for fixed hardware specs that go unused (e.g. 32GB RAM for simple tasks).">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_waste" oninput="calc()"></div>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Productivity Loss (Annual) <span class="info-icon" data-tooltip="Calculated Annually: Downtime, patching, & boot times.">ⓘ</span></span></div>
+                    <div class="label-row"><span class="label-text">Productivity Loss (Annual) <span class="info-icon" data-tooltip="Annual cost of user downtime due to patching, reboots, and hardware failures.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="l_prod" oninput="calc()"></div>
                 </div>
             </div>
@@ -239,7 +235,7 @@
             <div class="section-header text-capex">Setup & Access</div>
             <div class="inputs-wrapper">
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Thin Client / BYOD Cost</span></div>
+                    <div class="label-row"><span class="label-text">Thin Client / BYOD Cost <span class="info-icon" data-tooltip="Cost of a low-end thin client or BYOD stipend.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="c_hw" oninput="calc()"></div>
                 </div>
             </div>
@@ -257,11 +253,11 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Monthly License Fee</span></div>
+                    <div class="label-row"><span class="label-text">Monthly License Fee <span class="info-icon" data-tooltip="Flat per-user/month subscription cost for the Cloud PC.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="c_lic" oninput="calc()"></div>
                 </div>
                 <div class="form-group">
-                    <div class="label-row"><span class="label-text">Mgmt Overhead (Mo)</span></div>
+                    <div class="label-row"><span class="label-text">Mgmt Overhead (Mo) <span class="info-icon" data-tooltip="Intune/Endpoint Manager labor (typically lower than physical device mgmt).">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="c_mgmt" oninput="calc()"></div>
                 </div>
             </div>
@@ -269,19 +265,19 @@
             <div class="section-header text-savings">Strategic Value (Savings)</div>
             <div class="inputs-wrapper">
                 <div class="form-group savings-input">
-                    <div class="label-row"><span class="label-text">Extension Saving / Year <span class="info-icon" data-tooltip="Annual savings from not buying hardware during the extension years.">ⓘ</span></span></div>
+                    <div class="label-row"><span class="label-text">Extension Saving / Year <span class="info-icon" data-tooltip="Annual savings generated by not purchasing new hardware during the extension years.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="c_life_save_rate" value="200" oninput="calc()"></div>
                 </div>
                 <div class="form-group savings-input">
-                    <div class="label-row"><span class="label-text">Better Security Value <span class="info-icon" data-tooltip="Risk mitigation value (Negative Cost).">ⓘ</span></span></div>
+                    <div class="label-row"><span class="label-text">Better Security Value <span class="info-icon" data-tooltip="Monetary value of risk mitigation (no data on device). Appears as Negative Cost.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="c_sec_val" value="0" oninput="calc()"></div>
                 </div>
                 <div class="form-group savings-input">
-                    <div class="label-row"><span class="label-text">BCP / Disaster Value <span class="info-icon" data-tooltip="Business Continuity value (Negative Cost).">ⓘ</span></span></div>
+                    <div class="label-row"><span class="label-text">BCP / Disaster Value <span class="info-icon" data-tooltip="Value of business continuity (instant recovery). Appears as Negative Cost.">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="c_bcp_val" value="0" oninput="calc()"></div>
                 </div>
                  <div class="form-group">
-                    <div class="label-row"><span class="label-text" style="color:#333">Productivity Loss (Annual)</span></div>
+                    <div class="label-row"><span class="label-text" style="color:#333">Productivity Loss (Annual) <span class="info-icon" data-tooltip="Wait time for provisioning or connectivity (typically minimal).">ⓘ</span></span></div>
                     <div class="input-group"><span class="currency-symbol">$</span><input type="number" id="c_prod" oninput="calc()"></div>
                 </div>
             </div>
@@ -341,32 +337,32 @@
         gpu: { usd: 350, inr: 25000 }
     };
 
-    // Helper: L[HW, War, Log, Sup, Sec, Proc, Wst, Prod] | C[HW, Mgmt, SaveRate, SecVal, BCPVal, Prod, SKU]
+    // Helper: L[HW, War, Log, Sup, Proc, Wst, Prod] (SEC REMOVED) | C[HW, Mgmt, SaveRate, SecVal, BCPVal, Prod, SKU]
     function p(l, c, l_inr, c_inr) {
         return {
             usd: { 
-                l: { hw: l[0], war: l[1], log: l[2], supp: l[3], sec: l[4], proc: l[5], waste: l[6], prod: l[7] }, 
+                l: { hw: l[0], war: l[1], log: l[2], supp: l[3], proc: l[4], waste: l[5], prod: l[6] }, 
                 c: { hw: c[0], mgmt: c[1], save_rate: c[2], sec: c[3], bcp: c[4], prod: c[5], sku: c[6] } 
             },
             inr: {
-                l: { hw: l_inr[0], war: l_inr[1], log: l_inr[2], supp: l_inr[3], sec: l_inr[4], proc: l_inr[5], waste: l_inr[6], prod: l_inr[7] },
+                l: { hw: l_inr[0], war: l_inr[1], log: l_inr[2], supp: l_inr[3], proc: l_inr[4], waste: l_inr[5], prod: l_inr[6] },
                 c: { hw: c_inr[0], mgmt: c_inr[1], save_rate: c_inr[2], sec: c_inr[3], bcp: c_inr[4], prod: c_inr[5], sku: c[6] }
             }
         };
     }
 
     const profiles = {
-        intl: p([1400, 150, 800, 60, 25, 300, 200, 300], [0, 5, -200, -50, -100, 50, 'standard'], 
-                [100000, 12000, 30000, 3500, 1500, 15000, 10000, 25000], [0, 400, -15000, -4000, -8000, 4000, 'standard']),
+        intl: p([1400, 150, 800, 60, 300, 200, 300], [0, 5, -200, -50, -100, 50, 'standard'], 
+                [100000, 12000, 30000, 3500, 15000, 10000, 25000], [0, 400, -15000, -4000, -8000, 4000, 'standard']),
         
-        scalable: p([1200, 100, 150, 30, 15, 50, 100, 100], [0, 5, -200, -30, -50, 25, 'standard'], 
-                    [85000, 8000, 5000, 1500, 1000, 3000, 5000, 8000], [0, 400, -15000, -2500, -4000, 2000, 'standard']),
+        scalable: p([1200, 100, 150, 30, 50, 100, 100], [0, 5, -200, -30, -50, 25, 'standard'], 
+                    [85000, 8000, 5000, 1500, 3000, 5000, 8000], [0, 400, -15000, -2500, -4000, 2000, 'standard']),
         
-        byod: p([1200, 100, 150, 30, 15, 50, 100, 100], [0, 5, 0, -30, -50, 25, 'standard'], 
-                [85000, 8000, 5000, 1500, 1000, 3000, 5000, 8000], [0, 400, 0, -2500, -4000, 2000, 'standard']),
+        byod: p([1200, 100, 150, 30, 50, 100, 100], [0, 5, 0, -30, -50, 25, 'standard'], 
+                [85000, 8000, 5000, 1500, 3000, 5000, 8000], [0, 400, 0, -2500, -4000, 2000, 'standard']),
 
-        gpu: p([4000, 400, 200, 60, 20, 200, 800, 500], [0, 5, -500, -100, -300, 50, 'gpu'], 
-               [350000, 35000, 10000, 4000, 1500, 10000, 50000, 40000], [0, 400, -40000, -8000, -25000, 4000, 'gpu']),
+        gpu: p([4000, 400, 200, 60, 200, 800, 500], [0, 5, -500, -100, -300, 50, 'gpu'], 
+               [350000, 35000, 10000, 4000, 10000, 50000, 40000], [0, 400, -40000, -8000, -25000, 4000, 'gpu']),
     };
     // Default fallback
     profiles.dev = profiles.gpu;
@@ -411,7 +407,7 @@
         document.getElementById('l_warranty').value = p.l.war;
         document.getElementById('l_logistics').value = p.l.log;
         document.getElementById('l_support').value = p.l.supp;
-        document.getElementById('l_sec').value = p.l.sec;
+        // Security removed
         document.getElementById('l_proc').value = p.l.proc;
         document.getElementById('l_waste').value = p.l.waste;
         document.getElementById('l_prod').value = p.l.prod;
@@ -471,7 +467,8 @@
             }
         }
 
-        const l_opex_mo = Number(document.getElementById('l_support').value) + Number(document.getElementById('l_sec').value);
+        // OpEx (Security Removed)
+        const l_opex_mo = Number(document.getElementById('l_support').value);
         const l_opex_total = l_opex_mo * total_months;
         const l_prod_annual = Number(document.getElementById('l_prod').value);
         const l_prod_total = l_prod_annual * total_years;
